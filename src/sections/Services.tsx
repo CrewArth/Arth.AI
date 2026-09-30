@@ -5,7 +5,6 @@ export function Services() {
     <section id="services" className="editorial-section services-section" aria-labelledby="services-title">
       <div className="page-gutter">
         <div className="section-intro" data-reveal>
-          <p className="index-label">02 / SERVICES</p>
           <h2 id="services-title">WHAT WE DO.</h2>
           <p className="body-copy">Custom technology solutions built around your workflow, your users and your business.</p>
         </div>

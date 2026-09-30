@@ -6,7 +6,6 @@ export function Closing() {
       <section className="editorial-section approach-section" aria-labelledby="approach-title">
         <div className="page-gutter approach-layout">
           <div data-reveal>
-            <p className="index-label">05 / OUR APPROACH</p>
             <h2 id="approach-title">YOUR BUSINESS IS UNIQUE.<br />YOUR SOFTWARE SHOULD BE TOO.</h2>
           </div>
           <div className="approach-object" aria-hidden="true"><span /><span /><span /></div>
@@ -16,7 +15,6 @@ export function Closing() {
       <section className="editorial-section invitation-section" aria-labelledby="invitation-title">
         <div className="page-gutter invitation-layout" data-reveal>
           <div>
-            <p className="index-label">06 / START A CONVERSATION</p>
             <h2 id="invitation-title">HAVE AN IDEA THAT NEEDS TO BECOME SOFTWARE?</h2>
           </div>
           <div>
@@ -28,7 +26,6 @@ export function Closing() {
       <section id="contact" className="editorial-section contact-section" aria-labelledby="contact-title">
         <div className="page-gutter contact-layout" data-reveal>
           <div>
-            <p className="index-label">07 / CONTACT</p>
             <h2 id="contact-title">LET'S BUILD SOMETHING.</h2>
           </div>
           <div>

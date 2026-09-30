@@ -3,8 +3,10 @@ export function Footer() {
     <footer className="site-footer page-gutter">
       <div className="footer-main">
         <a className="footer-brand" href="#top">ARTH.AI</a>
-        <span>COMPLETE AI / WEB SOLUTION</span>
-        <a href="mailto:arthvala@gmail.com">arthvala@gmail.com</a>
+        <a href="/about">ABOUT US</a>
+        <a href="/services">SERVICES</a>
+        <a href="/contact">CONTACT US</a>
+        <a href="/careers">CAREERS</a>
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} ARTH.AI. ALL RIGHTS RESERVED.</span>

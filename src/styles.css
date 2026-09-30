@@ -114,6 +114,20 @@ h1, h2, h3 { text-transform: uppercase; font-weight: 500; letter-spacing: 0; }
 
 .projects-section { display: flex; align-items: center; }
 .projects-section > .page-gutter { width: 100%; }
+.simple-page { min-height: 100svh; }
+.simple-page-section { min-height: 100svh; padding-block: 8rem 5rem; }
+.simple-page-section h1 { max-width: 60rem; margin: 1.2rem 0 0; font-size: clamp(2.8rem, 7vw, 8rem); line-height: .95; }
+.simple-page-copy, .contact-page-intro { max-width: 38rem; margin-top: 2.5rem; }
+.simple-page-copy p:not(.body-copy) { margin: 1.4rem 0 0; color: #c9b6a2; line-height: 1.55; }
+.simple-page .pill-button { margin-top: 2.2rem; }
+.simple-page-lede { max-width: 36rem; margin-top: 2.5rem; }
+.service-page-list { margin-top: 4rem; }
+.service-page-list .service-row h2 { margin: 0; font-size: clamp(1.5rem, 2.5vw, 2.6rem); line-height: 1.05; }
+.contact-page-form { padding-bottom: 5rem; }
+.careers-page { min-height: 100svh; }
+.careers-section { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-block: 7rem 4rem; }
+.careers-section h1 { max-width: 58rem; margin: 1.2rem 0 0; font-size: clamp(2.8rem, 7vw, 8rem); line-height: .95; }
+.careers-back { width: fit-content; margin-top: 2.2rem; }
 .reveal-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.1fr) minmax(0, .95fr); align-items: center; gap: clamp(1.1rem, 2vw, 2.5rem); margin-top: 3rem; }
 .reveal-left h2 { margin: .7rem 0 2rem; font-size: clamp(2.5rem, 3.65vw, 4.7rem); line-height: .95; }
 .reveal-statement { margin: 0; max-width: 19rem; font-size: clamp(1.2rem, 1.8vw, 2rem); font-weight: 500; line-height: 1.05; }
@@ -126,13 +140,8 @@ h1, h2, h3 { text-transform: uppercase; font-weight: 500; letter-spacing: 0; }
 .browser-bar > span { width: 4px; height: 4px; border-radius: 50%; background: var(--driftwood); }
 .browser-bar > div { margin-inline: auto; padding-right: 1rem; color: #c9b6a2; font-size: .53rem; text-transform: uppercase; }
 .project-fallback { display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: .88; min-height: 24rem; padding: clamp(1rem, 2vw, 2rem); background: radial-gradient(circle at 50% 40%, #51321f, var(--bark) 57%, #21130a 100%); }
-.fallback-heading { display: flex; justify-content: space-between; gap: 1rem; font-size: .65rem; font-weight: 500; }
-.fallback-line { width: 20%; align-self: center; height: 1px; background: var(--driftwood); }
-.fallback-center { text-align: center; }
-.fallback-kicker { display: block; margin-bottom: 1rem; color: #d6bd9f; font-size: .67rem; font-weight: 500; }
-.fallback-center strong { display: block; font-size: clamp(1.9rem, 2.5vw, 3.2rem); line-height: 1; text-transform: uppercase; font-weight: 500; }
-.fallback-features { display: flex; justify-content: center; flex-wrap: wrap; gap: .4rem; }
-.fallback-features span { border: 1px solid rgba(255, 237, 215, .28); border-radius: 9999px; padding: .38rem .55rem; font-size: .6rem; text-transform: uppercase; }
+.project-fallback--logo-only { display: grid; place-items: center; }
+.project-logo { display: block; width: clamp(32rem, 60vw, 40rem); max-width: 100%; height: auto; margin: auto; filter: drop-shadow(0 0 18px rgba(255, 208, 165, .12)); }
 
 .technology-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 6vw, 8rem); }
 .technology-row { display: grid; grid-template-columns: 3rem minmax(0, 1fr); column-gap: .8rem; padding-block: 1.3rem; border-bottom: 1px solid var(--cork); }
@@ -211,6 +220,9 @@ h1, h2, h3 { text-transform: uppercase; font-weight: 500; letter-spacing: 0; }
   .section-intro { grid-template-columns: 1fr; row-gap: 1.5rem; }
   .section-intro .index-label { margin-bottom: 1rem; }
   .section-intro h2 { font-size: clamp(2.7rem, 8vw, 4rem); }
+  .simple-page-section { padding-block: 6rem 3rem; }
+  .simple-page-section h1 { font-size: clamp(2.7rem, 8vw, 4rem); }
+  .service-page-list { margin-top: 3rem; }
   .service-row { grid-template-columns: 2.5rem 1fr 1.5rem; row-gap: .8rem; }
   .service-row p { grid-column: 2 / 3; }
   .service-row .row-arrow { grid-row: 1; grid-column: 3; }

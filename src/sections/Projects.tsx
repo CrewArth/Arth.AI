@@ -7,7 +7,9 @@ export function Projects() {
   return (
     <section id="projects" className="editorial-section projects-section" aria-labelledby="project-title">
       <div className="page-gutter">
-        <p className="index-label" data-reveal>03 / FEATURED PROJECT</p>
+        <div className="section-intro" data-reveal>
+          <h2 id="services-title">OUR PROJECTS</h2>
+        </div>
         <div className="reveal-layout">
           <div className="reveal-left" data-reveal>
             <p className="eyebrow">SELECTED WORK</p>
@@ -18,9 +20,6 @@ export function Projects() {
           <div className="reveal-right" data-reveal>
             <p className="body-copy">{project.description}</p>
             <p className="support-copy">{project.longDescription}</p>
-            <ul className="tag-list" aria-label="Project technologies">
-              {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
-            </ul>
           </div>
         </div>
       </div>
