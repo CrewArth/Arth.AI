@@ -40,9 +40,14 @@ export function createContactHandler({ transporter, sender, now = Date.now }) {
     let body = ''
     let bytes = 0
     try {
-      for await (const chunk of req) {
-        bytes += chunk.length
-        if (bytes <= maximumBodyBytes) body += chunk.toString('utf8')
+      if (req.body !== undefined) {
+        body = typeof req.body === 'string' ? req.body : JSON.stringify(req.body)
+        bytes = Buffer.byteLength(body)
+      } else {
+        for await (const chunk of req) {
+          bytes += chunk.length
+          if (bytes <= maximumBodyBytes) body += chunk.toString('utf8')
+        }
       }
     } catch {
       if (!res.headersSent) respond(res, 400, 'We could not read your inquiry.')

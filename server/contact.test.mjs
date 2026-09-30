@@ -53,6 +53,22 @@ test('sends a valid inquiry to Arth.AI with the visitor as reply-to', async () =
   assert.equal(second.status, 429)
 })
 
+test('accepts a body parsed by a Vercel function', async () => {
+  let mail
+  const handler = createContactHandler({
+    sender: 'studio@gmail.com',
+    transporter: { async sendMail(value) { mail = value; return { accepted: ['arthvala@gmail.com'] } } },
+  })
+  const req = request({})
+  req.body = { email: 'person@example.com', projectIdea: 'Build a booking application.' }
+  const res = response()
+
+  await handler(req, res)
+
+  assert.equal(res.status, 200)
+  assert.equal(mail.replyTo, 'person@example.com')
+})
+
 test('never reports success when delivery fails', async () => {
   const handler = createContactHandler({
     sender: 'studio@gmail.com',

@@ -23,7 +23,7 @@ export function ContactForm() {
         body: JSON.stringify({ email, projectIdea }),
       })
       const result: { message?: string } = await response.json().catch(() => ({}))
-      if (response.status === 404) throw new Error('Contact service is unavailable. Start the site with npm run dev.')
+      if (response.status === 404) throw new Error('Contact is temporarily unavailable. Please email us directly at arthvala@gmail.com.')
       if (!response.ok) throw new Error(result.message || 'We could not send your inquiry right now.')
 
       setStatus('success')
@@ -33,7 +33,7 @@ export function ContactForm() {
     } catch (error) {
       setStatus('error')
       setMessage(error instanceof TypeError
-        ? 'Contact service is unavailable. Start the site with npm run dev.'
+        ? 'Contact is temporarily unavailable. Please email us directly at arthvala@gmail.com.'
         : error instanceof Error ? error.message : 'We could not send your inquiry right now.')
     }
   }
